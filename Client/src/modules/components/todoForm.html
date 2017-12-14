@@ -1,0 +1,94 @@
+<template>
+        <h1 align="center">Add a Todo!</h1>
+      
+        <div align="center">
+          <table width="33%" border="0" cellpadding="6">
+            <tr>
+              <td width="67%">
+                <p>Todo:                </p>
+                <p>
+                  <input value.bind="todoObj.todo" type="text" class="form-control" id="todoInput" aria-describedby="todoHelp" placeholder="Enter ToDo">
+                  <small id="todoHelp" class="form-text text-muted">
+              Please keep it short.</small></p></td>
+            </tr>
+      
+            <tr>
+              <td width="67%">
+                <p>Description: </p>
+                <p>
+                  <textarea value.bind="todoObj.description" type="text" class="form-control" id="descriptionInput" aria-describedby="descriptionHelp"
+                placeholder="Enter Description"></textarea>
+              <small id="descriptionHelp" class="form-text text-muted">The description can be longer.</small></p></td>
+            </tr>
+            &nbsp;
+<tr>
+                    <td width="67%">
+                <p>Priotity: </p>
+                <p>
+                  <select value.bind="todoObj.priority" class="form-control" id="exampleFormControlSelect2">
+                    
+                    
+                    <option repeat.for="priority of priorities" value.bind="priority">
+                      ${priority}</option>
+                    
+                    
+                  </select>
+                </p>
+                <p>
+                  <small id="priorityHelp" class="form-text text-muted">How urgent is this?</small>
+                </p>
+              </td>
+            </tr>
+      
+        </table>
+        
+                <table width="36%" border="0" cellpadding="6">
+       
+            <tr>
+                    <td width="26%">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Due Date:
+                        <flat-picker value.bind="todoObj.dateDue"></flat-picker>
+              
+              <p align="left"><small class="form-text text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Due Date.</small></p></td>
+            </tr>
+       
+          </table>
+        
+          
+          <!-- <table width="100%" border="0" cellpadding="6">
+  <tr>
+    <td>  -->
+                    <label class="btn btn-secondary">Browse for files&hellip;
+                        <input type="file" style="display: none;" change.delegate="changeFiles()" files.bind="files">
+                      
+</label>
+                    <div align="center"><small id="fileHelp" class="form-text text-muted">
+                      Upload files that pertain to this todo.</small>
+                      
+                    </div>
+                  <div class="col-8">
+                    <div align="center">
+                        <ul>
+                          <li repeat.for="file of filesToUpload" class="list-group-item">
+                            ${file.name}
+                            <span click.delegate="removeFile($index)" class="pull-right">
+                              <i class="fa fa-trash" aria-hidden="true">
+                              </i>
+                            </span>
+                          </li>
+                        </ul>
+                    </div>
+                    <ul>
+                    </ul>
+                
+                  </div>
+                <!-- </td>
+  </tr>
+</table> -->
+
+
+          <button click.trigger="save()" class="btn btn-primary topMargin">Submit</button>
+        </div>
+      </form>
+      </template>
+      

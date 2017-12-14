@@ -1,0 +1,54 @@
+<!-- <template>
+    <div id="errorMsg" innerhtml.bind="registerError"></div>
+   <center> <div class="card" style="width:800px">
+            <div class="card-body">
+                    <h4 class="card-title">Register</h4>
+            <center>
+                    <form class="form-inline">
+                                   
+        First Name: <input value.bind="user.firstName" class="form-control" id="firstName" placeholder="First Name">
+    
+        Last Name: <input value.bind="user.lastName" class="form-control" id="lastName" placeholder="Last Name"> 
+
+</form> <p>
+        <form class="form-inline">
+        Email: <input value.bind="user.email" type="email" class="form-control" id="email" placeholder="Email"> 
+        Password: <input value.bind="user.password" type="password" class="form-control" id="password" placeholder="Password">
+ </form> </p>
+    <button type="button" class="btn btn-primary" click.trigger="save()">Register</button>
+<button type="button" class="btn btn-link" click.trigger="goback()">Go to Login</button>
+</form> 
+</center>
+</div>
+</div>
+</center>
+</template> -->
+
+<template>
+    <h1 align="center">Register for a ToDo Account!</h1>
+  
+    <div align="center">
+      <table width="33%" border="0" cellpadding="6">
+        <tr>
+          <td width="33%">First Name:</td>
+          <td width="67%"><input value.bind="user.firstName"></td>
+        </tr>
+        <tr>
+          <td>Last Name:</td>
+          <td><input value.bind="user.lastName"></td>
+        </tr>
+        <tr>
+          <td>Email:</td>
+          <td><input value.bind="user.email"></td>
+        </tr>
+        <tr>
+          <td>Password:</td>
+          <td><input value.bind="user.password"></td>
+        </tr>
+      </table>
+      <button click.trigger="save()" class="btn btn-primary topMargin">Register</button>
+  </div>
+  </template>
+  
+  
+  
